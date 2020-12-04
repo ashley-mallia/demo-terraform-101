@@ -34,6 +34,7 @@ resource "aws_security_group" "default" {
 }
 
 resource "aws_instance" "web" {
+  version       = ">= 2.27.0"
   ami           = var.ami
   instance_type = "t2.medium"
   count         = var.num_webs
